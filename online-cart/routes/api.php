@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReviewsController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +37,12 @@ Route::get('allreviews',[
     'index',
 ]); 
 
+Route::post('addusers',[
+    UsersController::class,
+    'store',
+]); 
 
+Route::get('allusers',[
+    UsersController::class,
+    'index',
+]);
